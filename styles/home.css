@@ -295,7 +295,12 @@ main section + section h1 hr {
   background: var(--color-hover);
 }
 
-main section + section button {
+#more-products {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+#more-products button {
   width: 260px;
   height: 39px;
 
@@ -315,7 +320,7 @@ main section + section button {
   transition: background-color 0.2s;
 }
 
-main section + section button:hover {
+#more-products button:hover {
   background: var(--color-hover);
 }
 
@@ -367,6 +372,30 @@ main section + section + section form div div input {
   height: 30px;
   border: 1px solid var(--secondary-color);
   border-radius: 4px;
+}
+
+main section + section + section button {
+  width: 260px;
+  height: 39px;
+
+  background: var(--color-white);
+
+  color: var(--primary-color);
+  font-size: 16px;
+
+  border: 1px solid var(--secondary-color);
+  border-radius: 4px;
+
+  margin: auto;
+  margin-top: 51px;
+
+  cursor: pointer;
+
+  transition: background-color 0.2s;
+}
+
+main section + section + section button:hover {
+  background: var(--color-hover);
 }
 
 footer {

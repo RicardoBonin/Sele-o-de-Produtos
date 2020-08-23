@@ -7,6 +7,7 @@
 
   <link rel="stylesheet" href="/styles/main.css" />
   <link rel="stylesheet" href="/styles/home.css" />
+
 </head>
 <body>
   <header>
@@ -89,53 +90,10 @@
         <p>seleção especial</p>
         <hr />
       </h1>
-      <div class="list-products">
-        <div class="product">
-          <img src="#" alt="name-product">
-          <div class="description">
-            <h1>Nome do produto</h1>
-            <p>Descrição do produto um pouco maior, com duas linhas ou três que explica melhor do que se trata.</p>
-            <h2>De: R$23,99</h2>
-            <h1>Por:R$19,99</h1>
-            <h2>ou 2x de R$9,99</h2>
-            <button>Comprar</button>
-          </div>
-        </div>
-        <div class="product">
-          <img src="#" alt="name-product">
-          <div class="description">
-            <h1>Nome do produto</h1>
-            <p>Descrição do produto um pouco maior, com duas linhas ou três que explica melhor do que se trata.</p>
-            <h2>De: R$23,99</h2>
-            <h1>Por:R$19,99</h1>
-            <h2>ou 2x de R$9,99</h2>
-            <button>Comprar</button>
-          </div>
-        </div>
-        <div class="product">
-          <img src="#" alt="name-product">
-          <div class="description">
-            <h1>Nome do produto</h1>
-            <p>Descrição do produto um pouco maior, com duas linhas ou três que explica melhor do que se trata.</p>
-            <h2>De: R$23,99</h2>
-            <h1>Por:R$19,99</h1>
-            <h2>ou 2x de R$9,99</h2>
-            <button>Comprar</button>
-          </div>
-        </div>
-        <div class="product">
-          <img src="#" alt="name-product">
-          <div class="description">
-            <h1>Nome do produto</h1>
-            <p>Descrição do produto um pouco maior, com duas linhas ou três que explica melhor do que se trata.</p>
-            <h2>De: R$23,99</h2>
-            <h1>Por:R$19,99</h1>
-            <h2>ou 2x de R$9,99</h2>
-            <button>Comprar</button>
-          </div>
-        </div>
+      <div id="list-products" class="list-products">
+
       </div>
-      <button>Ainda mais produtos aqui!</button>
+      <div id="more-products"></div>
 
     </section>
     <section>
@@ -166,5 +124,7 @@
     <p>Linx</p>
     <p>Impulse 2019</p>
   </footer>
+  <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+  <script src="/scripts/index.js"></script>
 </body>
 </html>
