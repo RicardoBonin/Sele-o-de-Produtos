@@ -19,3 +19,11 @@ html {
 a {
   text-decoration: none;
 }
+
+label {
+  cursor: pointer;
+}
+
+input {
+  outline-color: blue;
+}
