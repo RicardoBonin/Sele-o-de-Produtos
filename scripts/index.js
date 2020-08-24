@@ -109,3 +109,30 @@ function vadateInputs() {
     document.getElementById("cpf").value = "";
   }, 5000);
 }
+
+//Send E-mail
+
+function sendEmail() {
+  const email = validateEmail("email--friend");
+  const name = validateName("name-friend");
+
+  if (email && name) {
+    document.getElementById("success-newsletter").style.display = "block";
+    console.log(true);
+  } else {
+    document.getElementById("error-newsletter").style.display = "block";
+    console.log(false);
+  }
+
+  //reset values
+  setTimeout(function () {
+    document.getElementById("error-newsletter").style.display = "none";
+    document.getElementById("success-newsletter").style.display = "none";
+    document.getElementById("name-friend").style.borderColor =
+      "var(--secondary-color)";
+    document.getElementById("email--friend").style.borderColor =
+      "var(--secondary-color)";
+    document.getElementById("name-friend").value = "";
+    document.getElementById("email--friend").value = "";
+  }, 5000);
+}

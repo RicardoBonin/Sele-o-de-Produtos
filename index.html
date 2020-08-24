@@ -8,6 +8,8 @@
   <link rel="stylesheet" href="/styles/main.css" />
   <link rel="stylesheet" href="/styles/home.css" />
 
+  <link rel="stylesheet" href="/styles/responsive.css" />
+
 </head>
 <body>
   <header>
@@ -77,7 +79,7 @@
           </fieldset>
 
           <button type="button" onclick="vadateInputs()">Enviar</button>
-          <span id="error-filds">[ERRO] Preencha todos os campos!</span>
+          <span id="error-filds">[ERRO] Preencha todos os campos corretamente!</span>
           <span id="success-filds">Formulário enviado com sucesso!</span>
         </form>
 
@@ -118,7 +120,9 @@
             <input type="text" id="email--friend" onblur="validateEmail('email--friend')" required>
           </div>
         </div>
-        <button>Enviar agora</button>
+        <button type="button" onclick="sendEmail()">Enviar agora</button>
+        <span id="error-newsletter">[ERRO] Preencha todos os campos corretamente!</span>
+        <span id="success-newsletter">E-mail enviado com sucesso!</span>
       </form>
     </section>
   </main>
