@@ -1,3 +1,4 @@
+// GET API and add products to the div list-products
 function get(url) {
   const listProduct = document.getElementById("list-products");
   const buttonMoreProducts = document.getElementById("more-products");
@@ -28,3 +29,21 @@ function get(url) {
     .catch((err) => console.log(err));
 }
 get("frontend-intern-challenge-api.iurykrieger.now.sh/products?page=1");
+
+function fMasc(objeto, mascara) {
+  obj = objeto;
+  masc = mascara;
+  setTimeout("fMascEx()", 1);
+}
+
+function fMascEx() {
+  obj.value = masc(obj.value);
+}
+
+function mCPF(cpf) {
+  cpf = cpf.replace(/\D/g, "");
+  cpf = cpf.replace(/(\d{3})(\d)/, "$1.$2");
+  cpf = cpf.replace(/(\d{3})(\d)/, "$1.$2");
+  cpf = cpf.replace(/(\d{3})(\d{1,2})$/, "$1-$2");
+  return cpf;
+}

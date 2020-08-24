@@ -234,8 +234,8 @@ main section + section h1 hr {
 }
 
 .product img {
-  border: 1px solid var(--secondary-color);
-  height: 120px;
+  height: 150px;
+  width: 200px;
 }
 
 .product h1 {
