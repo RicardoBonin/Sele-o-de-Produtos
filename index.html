@@ -57,26 +57,30 @@
         <form>
           <fieldset>
             <label for="name">Seu nome</label>
-            <input type="text" id="name" required>
+            <input type="text" id="name" onblur="validateName('name')" required>
             <label for="email">Email</label>
-            <input type="text" id="email" required>
+            <input type="text" id="email" onblur="validateEmail('email')" required>
             <label for="cpf">CPF:</label>
-            <input type="text" id="cpf" maxlength="14" onkeydown="javascript: fMasc( this, mCPF );" required>
+            <input type="text" id="cpf" maxlength="14" onblur="validateName('cpf')"
+              onkeydown="javascript: fMasc( this, mCPF );" required>
             <div>
               <div>
                 <label for="male">Masculino</label>
-                <input type="radio" name="genre" id="male" required>
+                <input type="radio" name="genre" id="male" value="male" checked>
               </div>
 
               <div>
                 <label for="feminine">Feminino</label>
-                <input type="radio" name="genre" id="feminine">
+                <input type="radio" name="genre" id="feminine" value="feminine">
               </div>
             </div>
           </fieldset>
 
-          <button>Enviar</button>
+          <button type="button" onclick="vadateInputs()">Enviar</button>
+          <span id="error-filds">[ERRO] Preencha todos os campos!</span>
+          <span id="success-filds">Formulário enviado com sucesso!</span>
         </form>
+
       </div>
 
 
@@ -107,11 +111,11 @@
         <div>
           <div>
             <label for="name-friend">Nome do seu amigo:</label>
-            <input type="text" id="name-friend" required>
+            <input type="text" id="name-friend" onblur="validateName('name-friend')" required>
           </div>
           <div>
             <label for="email--friend">E-mail:</label>
-            <input type="text" id="email--friend" required>
+            <input type="text" id="email--friend" onblur="validateEmail('email--friend')" required>
           </div>
         </div>
         <button>Enviar agora</button>

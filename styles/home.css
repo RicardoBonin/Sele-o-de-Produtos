@@ -186,6 +186,44 @@ main section div + div form button:hover {
   background: var(--color-hover);
 }
 
+#error-filds {
+  background-color: #ff634777;
+
+  color: red;
+  text-align: center;
+
+  border: 1px solid red;
+  border-radius: 4px;
+
+  margin: auto;
+  margin-top: 30px;
+
+  width: 100%;
+
+  padding: 10px;
+
+  display: none;
+}
+
+#success-filds {
+  background-color: #00800088;
+
+  color: green;
+  text-align: center;
+
+  border: 1px solid green;
+  border-radius: 4px;
+
+  margin: auto;
+  margin-top: 30px;
+
+  width: 100%;
+
+  padding: 10px;
+
+  display: none;
+}
+
 main section + section {
   display: flex;
   flex-direction: column;
