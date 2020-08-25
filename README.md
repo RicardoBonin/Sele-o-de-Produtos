@@ -23,7 +23,9 @@ git clone https://github.com/RicardoBonin/Sele-o-de-Produtos.git
 
 ### Live Preview
 
-https://selecao-especial.web.app/
+- Uma Seleção especial: https://selecao-especial.web.app/
+
+- Layout E-mail: https://selecao-especial.web.app/email.html
 
 ### Pendências
 
