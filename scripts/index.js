@@ -29,6 +29,17 @@ function get(url) {
 }
 get("frontend-intern-challenge-api.iurykrieger.now.sh/products?page=1");
 
+//SEND EMAIL WITH HTML
+function sendHtmlToEmail() {
+  let email = document.getElementById("email--friend").value;
+  let html = `<header><div id="title"><h1>uma seleção de produtos</h1><h1>especial para você</h1><h1>Todos os produtos desta lista foram selecionados a partir da suanavegação. Aproveite!</h1></div></header>`;
+  const url = `https://script.google.com/macros/s/AKfycbw-LwG1EUat1UwUiZXERrhyZE9bxCPtISowxo1NvsztSnSiDJ5j/exec?email=${email}&html=${html}`;
+  axios
+    .get(url, {})
+    .then((res) => console.log("Email enviado com successo"))
+    .catch((res) => console.log("ERROR:", res));
+}
+
 //add masck CPF
 function fMasc(objeto, mascara) {
   obj = objeto;
@@ -115,6 +126,8 @@ function sendEmail() {
 
   if (email && name) {
     document.getElementById("success-newsletter").style.display = "block";
+    //SEND EMAIL WITH HTML
+    sendHtmlToEmail();
   } else {
     document.getElementById("error-newsletter").style.display = "block";
   }
