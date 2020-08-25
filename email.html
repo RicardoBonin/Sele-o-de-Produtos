@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Seleção Especial</title>
+
+  <style>
+    :root {
+      --primary-color: #888888;
+      --secondary-color: #707070;
+      --color-white: #ffffff;
+      --color-hover: #d3d3d3;
+    }
+
+    * {
+      margin: 0px;
+      padding: 0px;
+      box-sizing: border-box;
+    }
+
+    html {
+      font-family: Helvetica, sans-serif;
+      color: var(--primary-color);
+    }
+
+    body {
+      width: 600px;
+
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+
+      margin: auto
+    }
+
+    header {
+      width: 100%;
+      height: 198px;
+      background: var(--secondary-color);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      border-bottom: 0 solid transparent;
+      position: relative;
+      z-index: 1;
+    }
+
+    header::after {
+      content: "";
+      background: var(--color-white);
+      display: flex;
+      width: 100%;
+      height: 55px;
+      clip-path: polygon(0% 8%, 102% 100%, -12% 107%, 0% 82%);
+      margin-top: 143px;
+      position: absolute;
+    }
+
+    #title {
+      width: 360px;
+    }
+
+    header h1 {
+      color: var(--color-white);
+      font-size: 23px;
+      font-weight: normal;
+      margin-top: 31px;
+    }
+
+    header h1+h1 {
+      font-size: 40px;
+      font-weight: bold;
+      margin-top: 13px;
+    }
+
+    header h1+h1+h1 {
+      font-size: 14px;
+      font-weight: normal;
+      text-align: center;
+      margin-top: 9px;
+    }
+
+    .text {
+      margin: 3px 21px;
+    }
+
+    .text h1 {
+      font-size: 20px;
+      font-weight: normal;
+    }
+
+    .text p {
+      font-size: 12px;
+    }
+
+    .products-container {
+      margin-top: 47px;
+      padding: 0 80px;
+
+      display: flex;
+      flex-direction: column;
+    }
+
+    .list-products {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 40px
+    }
+
+    .product {
+      width: 200px;
+    }
+
+    .product img {
+      width: 200px;
+      height: 150px;
+    }
+
+    .description h1 {
+      font-size: 14px;
+      font-weight: normal;
+    }
+
+    .product-description {
+      font-size: 12px;
+      font-weight: normal;
+      margin-top: 10px;
+    }
+
+    .product-old-price {
+      font-size: 12px;
+      font-weight: normal;
+      margin-top: 10px;
+    }
+
+    .product-new-price {
+      font-size: 16px;
+      font-weight: bold;
+      margin-top: 10px;
+    }
+
+    .product-installments {
+      font-size: 12px;
+      font-weight: normal;
+      margin-top: 7px;
+    }
+
+    .product-buy-btn {
+      width: 100%;
+      height: 30px;
+      background: var(--color-white);
+      color: var(--primary-color);
+      font-size: 16px;
+      border: 1px solid var(--secondary-color);
+      border-radius: 4px;
+      cursor: pointer;
+      margin-top: 10px;
+      transition: background-color 0.2s;
+    }
+
+    .product-buy-btn:hover {
+      background: var(--color-hover);
+    }
+
+    .more-products {
+      width: 383px;
+      height: 39px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: var(--color-white);
+      color: var(--primary-color);
+      font-size: 16px;
+      border: 1px solid var(--secondary-color);
+      border-radius: 4px;
+      margin: auto;
+      margin-top: 68px;
+      cursor: pointer;
+      transition: background-color 0.2s;
+      text-decoration: none;
+    }
+
+    .more-products:hover {
+      background: var(--color-hover);
+    }
+
+
+    footer {
+      background: var(--secondary-color);
+      color: var(--color-white);
+      text-align: center;
+      font-size: 12px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: flex-end;
+      margin-top: 50px;
+      width: 100%;
+      height: 158px;
+      position: relative;
+    }
+
+    footer p+p+p {
+      margin-bottom: 40px;
+    }
+
+    footer::after {
+      content: "";
+      background: var(--color-white);
+      display: flex;
+      width: 100%;
+      height: 65px;
+      clip-path: polygon(102% 38%, 0% 37%, 0% 100%, 93% 45%);
+      margin-bottom: 118px;
+      position: absolute;
+    }
+  </style>
+
+</head>
+<body>
+  <header>
+    <div id="title">
+      <h1>uma seleção de produtos</h1>
+      <h1>especial para você</h1>
+      <h1>
+        Todos os produtos desta lista foram selecionados a partir da sua
+        navegação. Aproveite!
+      </h1>
+    </div>
+  </header>
+
+  <main>
+    <section class="text">
+      <h1>Olá, Fulano</h1>
+      <p>Fizemos uma lista especial de produtos apenas para você. Isso mesmo: nesta lista temos só produtos que você
+        pode gostar. Seu amigo Ciclano lhe recomendou essa lista especial. Olha só:</p>
+    </section>
+    <section class="products-container">
+      <div id="list-products" class="list-products">
+        <div class="product">
+          <img class="product-image" src="//imagens.pontofrio.com.br/Control/ArquivoExibir.aspx?IdArquivo=6875461"
+            alt="Product Number 1">
+          <div class="description">
+            <h1>Product Number 1</h1>
+            <p class="product-description">Product long description number 1 just to make more than one like of text.
+            </p>
+            <h2 class="product-old-price">De: R$103</h2>
+            <h1 class="product-new-price">Por:R$55</h1>
+            <h2 class="product-installments">ou 10x de R$5.50</h2>
+            <button class="product-buy-btn">Comprar</button>
+          </div>
+        </div>
+        <div class="product">
+          <img class="product-image" src="//imagens.pontofrio.com.br/Control/ArquivoExibir.aspx?IdArquivo=6875461"
+            alt="Product Number 1">
+          <div class="description">
+            <h1 product-name="">Product Number 1</h1>
+            <p class="product-description">Product long description number 1 just to make more than one like of text.
+            </p>
+            <h2 class="product-old-price">De: R$103</h2>
+            <h1 class="product-new-price">Por:R$55</h1>
+            <h2 class="product-installments">ou 10x de R$5.50</h2>
+            <button class="product-buy-btn">Comprar</button>
+          </div>
+        </div>
+      </div>
+      <a href="https://selecao-especial.web.app/" class="more-products">Tem muito mais aqui. Vem ver!</a>
+    </section>
+  </main>
+
+  <footer>
+    <p>Testando suas habilidades em HTML, CSS e JS.</p>
+    <p>Linx</p>
+    <p>Impulse 2019</p>
+  </footer>
+</body>
+</html>

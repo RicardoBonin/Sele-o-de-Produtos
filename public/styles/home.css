@@ -1,3 +1,482 @@
+body {
+  margin: 0;
+  font-family: Arial, Verdana, sans-serif;
+  line-height: 1.5;
+}
+
+header {
+  width: 100%;
+  background: var(--secondary-color);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 69px 20px 40px 20px;
+  border-bottom: 0 solid transparent;
+  position: relative;
+  z-index: 1;
+}
+
+header::after {
+  content: "";
+  background: var(--color-white);
+  display: flex;
+  width: 100%;
+  height: 90px;
+  clip-path: polygon(0% 0%, 102% 100%, 0% 100%, 0% 95%);
+  margin-top: 294px;
+  position: absolute;
+}
+
+#title {
+  text-align: left;
+}
+
+header h1 {
+  color: var(--color-white);
+  font-size: 20px;
+  font-weight: 200;
+}
+
+header h1 + h1 {
+  font-size: 37px;
+  font-weight: 700;
+}
+
+header h1 + h1 + h1 {
+  font-size: 14px;
+  font-weight: 200;
+  margin-top: 24px;
+}
+
+header nav ul {
+  display: grid;
+  grid-template-columns: 150px 150px;
+  grid-column-gap: 30px;
+  grid-row-gap: 20px;
+  margin-top: 50px;
+}
+
+header nav ul li {
+  width: 160px;
+  height: 40px;
+  background: var(--color-white);
+  border: 1px solid var(--secondary-color);
+  border-radius: 4px;
+  cursor: pointer;
+  list-style: none;
+  margin-right: 40px;
+  padding: 12px 31px;
+  transition: background-color 0.2s;
+  z-index: 2;
+}
+
+header nav ul li:hover {
+  background: var(--color-hover);
+}
+
+header nav ul li a {
+  color: var(--primary-color);
+  font-size: 11px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  padding: 20px;
+}
+
+main section {
+  display: flex;
+  flex-direction: column;
+}
+
+main section div {
+  font-size: 12px;
+}
+
+.intro-container div + h1 {
+  font-size: 20px;
+}
+
+.intro-container div p {
+  margin-bottom: 20px;
+}
+
+.divider {
+  position: relative;
+}
+
+.divider hr {
+  width: 100%;
+  height: 0;
+  border: 1px solid var(--secondary-color);
+}
+
+.divider p {
+  margin: 0;
+  text-align: center;
+  font-size: 16px;
+  font-weight: bold;
+  background: #fff;
+  position: absolute;
+  top: 1px;
+  width: 12rem;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.form-container {
+  margin-top: 10px;
+}
+
+.form-container form {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-container form fieldset {
+  display: flex;
+  flex-direction: column;
+  border: transparent;
+  margin-bottom: 20px;
+}
+
+.form-container form label {
+  font-size: 12px;
+}
+
+.form-container form fieldset input {
+  margin-top: 7px;
+  width: 100%;
+  height: 30px;
+
+  border: 1px solid var(--secondary-color);
+  border-radius: 4px;
+}
+
+.form-container form fieldset input + label {
+  margin-top: 20px;
+}
+
+.form-container form fieldset div {
+  display: flex;
+  align-items: center;
+  justify-content: left;
+}
+
+.form-container form fieldset div div {
+  display: flex;
+  flex-direction: row-reverse;
+  align-items: center;
+  margin-top: 20px;
+}
+
+.form-container form fieldset div div label {
+  margin-right: 40px;
+  cursor: pointer;
+}
+
+.form-container form fieldset div div input {
+  width: 14px;
+  height: 14px;
+  outline-color: var(--secondary-color);
+  cursor: pointer;
+  margin-top: 0;
+  margin-right: 5px;
+  border-radius: 100%;
+}
+
+.form-container form button {
+  background: var(--color-white);
+  cursor: pointer;
+  height: 39px;
+  border: 1px solid var(--secondary-color);
+  border-radius: 4px;
+  color: var(--primary-color);
+  font-size: 16px;
+  transition: bachground-color 0.2s;
+}
+
+.form-container form button:hover {
+  background: var(--color-hover);
+}
+#error-filds {
+  background-color: #ff634777;
+  color: red;
+  text-align: center;
+  border: 1px solid red;
+  border-radius: 4px;
+  margin: auto;
+  margin-top: 30px;
+  width: 100%;
+  padding: 10px;
+  display: none;
+}
+
+#success-filds {
+  background-color: #00800088;
+  color: green;
+  text-align: center;
+  border: 1px solid green;
+  border-radius: 4px;
+  margin: auto;
+  margin-top: 30px;
+  width: 100%;
+  padding: 10px;
+  display: none;
+}
+
+.products-container {
+  margin-top: 100px;
+}
+
+.list-products {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  row-gap: 39px;
+  margin-top: 50px;
+}
+
+.product {
+  display: flex;
+  text-align: left;
+}
+
+.description {
+  margin-left: 30px;
+}
+
+.product-image {
+  height: 129px;
+  width: 169px;
+}
+
+.product-name {
+  font-size: 14px;
+  font-weight: normal;
+  text-align: left;
+  margin-top: 14px;
+  justify-content: left;
+}
+
+.product-description {
+  display: none;
+}
+
+.product-old-price {
+  font-size: 14px;
+  font-weight: normal;
+  margin-top: 10px;
+}
+
+.product-new-price {
+  font-size: 16px;
+  font-weight: bold;
+  margin-top: 6px;
+}
+
+.product-installments {
+  font-size: 12px;
+  font-weight: normal;
+  margin-top: 7px;
+}
+
+.product-buy-btn {
+  width: 100%;
+  height: 30px;
+  background: var(--color-white);
+  color: var(--primary-color);
+  font-size: 16px;
+  border: 1px solid var(--secondary-color);
+  border-radius: 4px;
+  cursor: pointer;
+  margin-top: 10px;
+  transition: background-color 0.2s;
+}
+
+.product-buy-btn:hover {
+  background: var(--color-hover);
+}
+
+#more-products {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 50px;
+}
+#more-products button {
+  width: 260px;
+  height: 39px;
+  background: var(--color-white);
+  color: var(--primary-color);
+  font-size: 16px;
+  border: 1px solid var(--secondary-color);
+  border-radius: 4px;
+  margin: auto;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+#more-products button:hover {
+  background: var(--color-hover);
+}
+
+.share-container {
+  margin-top: 100px;
+}
+
+.share-container h3 {
+  margin-top: 40px;
+}
+
+.share-container h1 p {
+  padding: 0;
+  width: 26%;
+}
+
+.share-container h3 {
+  font-size: 14px;
+  font-weight: normal;
+  text-align: center;
+
+  margin-top: 44px;
+}
+
+.share-container form {
+  margin-top: 39px;
+  text-align: center;
+}
+
+.fields-container {
+  border: transparent;
+  display: grid;
+  grid-row-gap: 20px;
+}
+
+.fields-container div {
+  display: grid;
+  text-align: left;
+}
+
+.fields-container div label {
+  cursor: pointer;
+}
+
+.fields-container div input {
+  margin-top: 7px;
+  height: 30px;
+  border: 1px solid var(--secondary-color);
+  border-radius: 4px;
+}
+
+.share-container button {
+  width: 260px;
+  height: 39px;
+  background: var(--color-white);
+  color: var(--primary-color);
+  font-size: 16px;
+  border: 1px solid var(--secondary-color);
+  border-radius: 4px;
+  margin: auto;
+  margin-top: 51px;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.share-container button:hover {
+  background: var(--color-hover);
+}
+
+#error-fields {
+  background-color: #ff634777;
+  color: red;
+  text-align: center;
+  border: 1px solid red;
+  border-radius: 4px;
+  margin: auto;
+  margin-top: 30px;
+  width: 100%;
+  padding: 10px;
+  display: none;
+}
+
+#success-fields {
+  background-color: #00800088;
+  color: green;
+  text-align: center;
+  border: 1px solid green;
+  border-radius: 4px;
+  margin: auto;
+  margin-top: 30px;
+  width: 100%;
+  padding: 10px;
+  display: none;
+}
+
+#error-newsletter {
+  display: block;
+  background-color: #ff634777;
+  color: red;
+  text-align: center;
+  border: 1px solid red;
+  border-radius: 4px;
+  margin: auto;
+  margin-top: 30px;
+  width: 300px;
+  padding: 10px;
+  display: none;
+}
+
+#success-newsletter {
+  display: block;
+  background-color: #00800088;
+  color: green;
+  text-align: center;
+  border: 1px solid green;
+  border-radius: 4px;
+  margin: auto;
+  margin-top: 30px;
+  width: 260px;
+  padding: 10px;
+  display: none;
+}
+
+footer {
+  background: var(--secondary-color);
+  color: var(--color-white);
+  text-align: center;
+  font-size: 12px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-end;
+  width: 100%;
+  height: 170px;
+  position: relative;
+}
+
+footer p + p + p {
+  margin-bottom: 40px;
+}
+
+footer::after {
+  content: "";
+  background: var(--color-white);
+  display: flex;
+  width: 100%;
+  height: 65px;
+  clip-path: polygon(102% 38%, 0% 37%, 0% 100%, 93% 45%);
+  margin-bottom: 130px;
+  position: absolute;
+}
+
 /************************************************************************************/
 
 @media (min-width: 543px) {

@@ -1,0 +1,30 @@
+:root {
+  --primary-color: #888888;
+  --secondary-color: #707070;
+  --color-white: #ffffff;
+  --color-hover: #d3d3d3;
+}
+
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
+
+html {
+  font-family: Helvetica, sans-serif;
+  color: var(--primary-color);
+}
+
+a {
+  text-decoration: none;
+}
+
+label {
+  cursor: pointer;
+}
+
+input {
+  outline-color: blue;
+  padding: 16px;
+}
