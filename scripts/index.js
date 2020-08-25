@@ -13,14 +13,14 @@ function get(url) {
       res.data.products.map((product) => {
         listProduct.innerHTML += `
         <div class="product">
-        <img src="${product.image}" alt="${product.name}">
+        <img class="product-image" src="${product.image}" alt="${product.name}">
         <div class="description">
-          <h1>${product.name}</h1>
-          <p>${product.description}</p>
-          <h2>De: R$${product.oldPrice}</h2>
-          <h1>Por:R$${product.price}</h1>
-          <h2>ou ${product.installments.count}x de R$${product.installments.value}0</h2>
-          <button>Comprar</button>
+          <h1 product-name>${product.name}</h1>
+          <p class="product-description">${product.description}</p>
+          <h2 class="product-old-price">De: R$${product.oldPrice}</h2>
+          <h1 class="product-new-price">Por:R$${product.price}</h1>
+          <h2 class="product-installments">ou ${product.installments.count}x de R$${product.installments.value}0</h2>
+          <button class="product-buy-btn">Comprar</button>
         </div>
       </div>
         `;
